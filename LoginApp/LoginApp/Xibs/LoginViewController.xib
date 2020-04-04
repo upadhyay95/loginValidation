@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="LoginApp" customModuleProvider="target">
+            <connections>
+                <outlet property="activityView" destination="7cE-JA-Ein" id="T40-SU-VzW"/>
+                <outlet property="emailIdTxtField" destination="bPe-Yd-7B6" id="l07-Ba-gyz"/>
+                <outlet property="loginBtn" destination="Eim-8H-kFL" id="uOb-ML-d4u"/>
+                <outlet property="mobileImgView" destination="lo6-RR-rJs" id="oqN-9J-Dna"/>
+                <outlet property="passwordTxtField" destination="sTs-YP-CK4" id="cUw-X2-aPS"/>
+                <outlet property="stackView" destination="LRM-ET-BHf" id="Yli-bG-kgf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeImgView" destination="cAG-Wf-mHx" id="CGv-aS-E36"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_mobile" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-RR-rJs">
+                    <rect key="frame" x="79.5" y="144" width="255" height="100"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_welcome" translatesAutoresizingMaskIntoConstraints="NO" id="cAG-Wf-mHx">
+                    <rect key="frame" x="114" y="274" width="186" height="25"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LRM-ET-BHf">
+                    <rect key="frame" x="30" y="582" width="354" height="100"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bPe-Yd-7B6">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="email"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="PASSWORD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sTs-YP-CK4">
+                            <rect key="frame" x="0.0" y="54" width="354" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="NLj-6E-NmU"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eim-8H-kFL">
+                    <rect key="frame" x="30" y="722" width="354" height="40"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.59554091546164378" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hoW-v2-33a"/>
+                    </constraints>
+                    <state key="normal" title="LOGIN">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="loginBtnAction:" destination="-1" eventType="touchUpInside" id="Fn5-hB-4PC"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7cE-JA-Ein">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60348886986301364" colorSpace="custom" customColorSpace="displayP3"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.86642051940639253" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="lo6-RR-rJs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="7QI-3D-JDW"/>
+                <constraint firstItem="cAG-Wf-mHx" firstAttribute="top" secondItem="lo6-RR-rJs" secondAttribute="bottom" constant="30" id="Gie-4I-ZfW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Eim-8H-kFL" secondAttribute="trailing" constant="30" id="Mow-8E-uF7"/>
+                <constraint firstItem="lo6-RR-rJs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Owt-jS-U8T"/>
+                <constraint firstItem="Eim-8H-kFL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="RDX-KD-gyF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LRM-ET-BHf" secondAttribute="trailing" constant="30" id="acr-YH-nDC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Eim-8H-kFL" secondAttribute="bottom" constant="100" id="apf-E7-IZQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7cE-JA-Ein" secondAttribute="bottom" id="dBy-bU-zzf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7cE-JA-Ein" secondAttribute="trailing" id="eDb-Un-nfS"/>
+                <constraint firstItem="7cE-JA-Ein" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ecL-HB-0Ik"/>
+                <constraint firstItem="cAG-Wf-mHx" firstAttribute="centerX" secondItem="lo6-RR-rJs" secondAttribute="centerX" id="hIg-6i-tb4"/>
+                <constraint firstItem="Eim-8H-kFL" firstAttribute="top" secondItem="LRM-ET-BHf" secondAttribute="bottom" constant="40" id="ihd-gK-onK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="7cE-JA-Ein" secondAttribute="top" id="oeV-3J-v2p"/>
+                <constraint firstItem="LRM-ET-BHf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="wxi-OP-stP"/>
+                <constraint firstAttribute="top" secondItem="cAG-Wf-mHx" secondAttribute="bottom" constant="-299" id="xRw-aZ-5pH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="123"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_welcome" width="186" height="25"/>
+        <image name="img_mobile" width="255" height="100"/>
+    </resources>
+</document>
