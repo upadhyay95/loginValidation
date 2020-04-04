@@ -3,6 +3,7 @@
 Demo app to validate the provided username and password.
 
 In this project https://reqres.in/ api is being used to fetch the user's data and validate the login.
+For Login success it can be checked using the credentials shown on https://reqres.in/ under the Login Successful
 Icons were downloaded from https://icons8.com/
 
 Project is built for iOS 12.0+
